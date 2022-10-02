@@ -1,9 +1,12 @@
-const path = require("path");
+import * as path from "path"
 
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+import * as webpack from "webpack"
 
-module.exports = {
+import HtmlWebpackPlugin from "html-webpack-plugin"
+import CopyPlugin from "copy-webpack-plugin"
+
+
+const config: webpack.Configuration = {
   mode: "development",
   entry: {
     "background": "./src/background/index.ts",
@@ -21,13 +24,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/options/index.html",
       filename: "options.html",
-      chunks: [ "options" ], // 他の Entry point の JS が inject されないようにする
+      chunks: ["options"], // 他の Entry point の JS が inject されないようにする
       minify: false,
     }),
     new HtmlWebpackPlugin({
       template: "./src/popup/index.html",
       filename: "popup.html",
-      chunks: [ "popup" ],
+      chunks: ["popup"],
       minify: false,
     }),
   ],
@@ -35,7 +38,7 @@ module.exports = {
     rules: [
       {
         test: /\.(css|scss)$/i,
-        use: [ "style-loader", "css-loader" ],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.tsx?$/,
@@ -52,4 +55,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-};
+}
+
+export default config;

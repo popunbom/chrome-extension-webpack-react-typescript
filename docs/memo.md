@@ -39,6 +39,8 @@ $ npm install --save-dev \
   typescript ts-loader \
   react react-dom @types/react @types/react-dom \
   @types/chrome \
+  ts-node @types/node @types/webpack \
+  ;
 ```
 
 

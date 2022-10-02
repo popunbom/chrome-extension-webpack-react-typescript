@@ -11,6 +11,12 @@
     "allowSyntheticDefaultImports": true, // Add config for React
     "types": [
       "chrome"
-    ]
+    ],
+    "esModuleInterop": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   }
 }
