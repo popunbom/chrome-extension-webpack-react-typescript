@@ -1,0 +1,12 @@
+html, body {
+  font-size: 12pt;
+}
+
+div {
+  margin: 8px 0px;
+}
+
+.message { font-weight: bold; }
+.success { color: green;      }
+.warn    { color: darkorange; }
+.error   { color: crimson;    }

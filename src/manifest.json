@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "my-extension",
+  "description": "My Extension",
+  "version": "0.1",
+
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://example.com/"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "https://github.com/*" ],
+      "js": [ "contents.js" ]
+    }
+  ],
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

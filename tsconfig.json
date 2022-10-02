@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "es6", // Make sure to avoid setting module to "CommonJS", or webpack won't be able to tree-shake your code.
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true, // Add config for React
+    "types": [
+      "chrome"
+    ]
+  }
+}
